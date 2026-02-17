@@ -23,7 +23,13 @@
                 <img src="images/z-rapids-trees.jpg" alt="Rapid Trees logo">
                 <span>Rapid Trees</span>
             </a>
-            <nav class="site-nav" aria-label="Primary Navigation">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <nav id="primary-navigation" class="site-nav" aria-label="Primary Navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -33,6 +39,13 @@
             </nav>
         </div>
     </header>
+    <section class="safety-alert" data-safety-alert>
+        <div class="container safety-alert-content">
+            <p><strong>River Safety Update:</strong> <span data-alert-message>Loading latest river guidance...</span>
+                <span class="alert-date" data-alert-date></span></p>
+            <button type="button" class="alert-dismiss" data-alert-dismiss aria-label="Dismiss safety alert">Dismiss</button>
+        </div>
+    </section>
 
     <main>
         <section class="page-banner">
@@ -44,8 +57,87 @@
             </div>
         </section>
 
+        <section class="section container trip-filters">
+            <div class="section-heading">
+                <h2>Filter by experience level</h2>
+                <p id="trip-results-count" class="filter-result-text" aria-live="polite">Showing 3 of 3 trips</p>
+            </div>
+            <div class="filter-group" role="group" aria-label="Trip difficulty filter">
+                <button type="button" class="filter-chip is-active" data-filter="all">All Trips</button>
+                <button type="button" class="filter-chip" data-filter="beginner">Beginner</button>
+                <button type="button" class="filter-chip" data-filter="intermediate">Intermediate</button>
+                <button type="button" class="filter-chip" data-filter="expert">Expert</button>
+            </div>
+        </section>
+
+        <section class="section container weather-widget" data-weather-widget data-lat="45.1758" data-lon="-113.8959"
+          data-location="Salmon, Idaho">
+            <div class="section-heading">
+                <h2>River Weather Snapshot</h2>
+                <p class="weather-note">Live conditions near our launch area to help you prepare.</p>
+            </div>
+            <div class="weather-panel">
+                <p class="weather-status" data-weather-status>Loading current conditions...</p>
+                <dl class="weather-stats">
+                    <div>
+                        <dt>Location</dt>
+                        <dd data-weather-location>Salmon, Idaho</dd>
+                    </div>
+                    <div>
+                        <dt>Temperature</dt>
+                        <dd data-weather-temp>--</dd>
+                    </div>
+                    <div>
+                        <dt>Wind</dt>
+                        <dd data-weather-wind>--</dd>
+                    </div>
+                    <div>
+                        <dt>Conditions</dt>
+                        <dd data-weather-code>--</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <section class="section section-muted">
+            <div class="container availability-layout" data-availability-calendar>
+                <div class="availability-header">
+                    <div>
+                        <p class="eyebrow">Availability Calendar</p>
+                        <h2>Select an open launch date</h2>
+                    </div>
+                    <div class="calendar-nav">
+                        <button type="button" class="calendar-nav-btn" data-calendar-prev aria-label="Previous month">Prev</button>
+                        <p class="calendar-month" data-calendar-label aria-live="polite">Month Year</p>
+                        <button type="button" class="calendar-nav-btn" data-calendar-next aria-label="Next month">Next</button>
+                    </div>
+                </div>
+
+                <div class="calendar-weekdays" aria-hidden="true">
+                    <span>Sun</span>
+                    <span>Mon</span>
+                    <span>Tue</span>
+                    <span>Wed</span>
+                    <span>Thu</span>
+                    <span>Fri</span>
+                    <span>Sat</span>
+                </div>
+                <div class="calendar-grid" data-calendar-grid></div>
+
+                <div class="calendar-footer">
+                    <div class="calendar-legend" aria-label="Availability status legend">
+                        <span><i class="legend-dot open"></i>Open</span>
+                        <span><i class="legend-dot limited"></i>Limited</span>
+                        <span><i class="legend-dot full"></i>Full</span>
+                    </div>
+                    <p class="calendar-selected">Selected Date: <strong data-calendar-selected>Not selected</strong></p>
+                </div>
+            </div>
+        </section>
+
         <section class="section container trips-grid">
-            <article class="trip-card">
+            <article class="trip-card" data-trip-card data-difficulty="beginner" data-trip="Family Fun Run"
+              data-price="45">
                 <img src="images/happy-adventurers.jpg" alt="Family rafting trip">
                 <div class="trip-info">
                     <div class="trip-head">
@@ -61,7 +153,8 @@
                 </div>
             </article>
 
-            <article class="trip-card">
+            <article class="trip-card" data-trip-card data-difficulty="intermediate" data-trip="Canyon Explorer"
+              data-price="85">
                 <img src="images/rafting43_600.webp" alt="Intermediate rafting group">
                 <div class="trip-info">
                     <div class="trip-head">
@@ -78,7 +171,7 @@
                 </div>
             </article>
 
-            <article class="trip-card">
+            <article class="trip-card" data-trip-card data-difficulty="expert" data-trip="Rapid Fury" data-price="120">
                 <img src="images/rafting27_1024.webp" alt="Extreme rafting adventure">
                 <div class="trip-info">
                     <div class="trip-head">
@@ -138,10 +231,66 @@
         </section>
 
         <section class="section container">
-            <div class="booking-panel">
-                <h2>Need help choosing the best route?</h2>
-                <p>Tell us your group size and experience level and we will recommend the right package.</p>
-                <a href="contact.html" class="btn btn-primary">Talk to Our Team</a>
+            <div class="booking-tools">
+                <article class="calculator-panel">
+                    <h2>Trip Price Calculator</h2>
+                    <p>Select your trip details and review an estimated total instantly.</p>
+                    <form id="trip-calculator" class="calculator-form" action="#" method="get">
+                        <div class="form-row">
+                            <label for="calc-trip">Trip Package</label>
+                            <select id="calc-trip" name="calc-trip">
+                                <option value="Family Fun Run" data-price="45">Family Fun Run - $45 / person</option>
+                                <option value="Canyon Explorer" data-price="85">Canyon Explorer - $85 / person</option>
+                                <option value="Rapid Fury" data-price="120">Rapid Fury - $120 / person</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <label for="calc-guests">Number of Guests</label>
+                            <input type="number" id="calc-guests" name="calc-guests" min="1" max="40" value="4">
+                        </div>
+                        <div class="form-row">
+                            <label for="calc-date">Trip Date</label>
+                            <input type="date" id="calc-date" name="calc-date">
+                        </div>
+                        <fieldset class="addon-group">
+                            <legend>Add-ons</legend>
+                            <label><input type="checkbox" id="addon-lunch" value="18"> Riverside lunch (+$18 per
+                                guest)</label>
+                            <label><input type="checkbox" id="addon-photo" value="12"> Photo package (+$12 per
+                                guest)</label>
+                            <label><input type="checkbox" id="addon-shuttle" value="45"> Shuttle transport (+$45 per
+                                group)</label>
+                        </fieldset>
+                    </form>
+                </article>
+
+                <aside class="booking-summary" aria-live="polite">
+                    <h2>Booking Summary</h2>
+                    <dl>
+                        <div>
+                            <dt>Selected Trip</dt>
+                            <dd id="summary-trip">Family Fun Run</dd>
+                        </div>
+                        <div>
+                            <dt>Guests</dt>
+                            <dd id="summary-guests">4</dd>
+                        </div>
+                        <div>
+                            <dt>Date</dt>
+                            <dd id="summary-date">Not selected</dd>
+                        </div>
+                        <div>
+                            <dt>Per-Person Price</dt>
+                            <dd id="summary-base-price">$45.00</dd>
+                        </div>
+                        <div>
+                            <dt>Add-ons</dt>
+                            <dd id="summary-addons">None</dd>
+                        </div>
+                    </dl>
+                    <p class="summary-total">Estimated Total: <strong id="summary-total">$180.00</strong></p>
+                    <a href="contact.html" class="btn btn-primary">Talk to Our Team</a>
+                </aside>
             </div>
         </section>
     </main>
@@ -166,6 +315,8 @@
             </nav>
         </div>
     </footer>
+    <button type="button" class="back-to-top" aria-label="Back to top">Top</button>
+    <script src="scripts/main.js" defer></script>
 </body>
 
 </html>

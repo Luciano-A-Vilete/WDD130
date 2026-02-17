@@ -23,7 +23,13 @@
                 <img src="images/z-rapids-trees.jpg" alt="Rapid Trees logo">
                 <span>Rapid Trees</span>
             </a>
-            <nav class="site-nav" aria-label="Primary Navigation">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <nav id="primary-navigation" class="site-nav" aria-label="Primary Navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -33,6 +39,13 @@
             </nav>
         </div>
     </header>
+    <section class="safety-alert" data-safety-alert>
+        <div class="container safety-alert-content">
+            <p><strong>River Safety Update:</strong> <span data-alert-message>Loading latest river guidance...</span>
+                <span class="alert-date" data-alert-date></span></p>
+            <button type="button" class="alert-dismiss" data-alert-dismiss aria-label="Dismiss safety alert">Dismiss</button>
+        </div>
+    </section>
 
     <main>
         <section class="page-banner">
@@ -63,7 +76,7 @@
 
             <article class="form-panel">
                 <h2>Send a Message</h2>
-                <form action="#" method="post">
+                <form action="#" method="post" class="needs-validation" novalidate>
                     <div class="form-row">
                         <label for="user_name">Full Name:</label>
                         <input type="text" id="user_name" name="user_name" required>
@@ -132,6 +145,8 @@
             </nav>
         </div>
     </footer>
+    <button type="button" class="back-to-top" aria-label="Back to top">Top</button>
+    <script src="scripts/main.js" defer></script>
 </body>
 
 </html>

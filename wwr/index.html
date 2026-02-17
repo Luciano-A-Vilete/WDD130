@@ -23,7 +23,13 @@
                 <img src="images/z-rapids-trees.jpg" alt="Rapid Trees logo">
                 <span>Rapid Trees</span>
             </a>
-            <nav class="site-nav" aria-label="Primary Navigation">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <nav id="primary-navigation" class="site-nav" aria-label="Primary Navigation">
                 <ul>
                     <li><a class="active" href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -33,6 +39,13 @@
             </nav>
         </div>
     </header>
+    <section class="safety-alert" data-safety-alert>
+        <div class="container safety-alert-content">
+            <p><strong>River Safety Update:</strong> <span data-alert-message>Loading latest river guidance...</span>
+                <span class="alert-date" data-alert-date></span></p>
+            <button type="button" class="alert-dismiss" data-alert-dismiss aria-label="Dismiss safety alert">Dismiss</button>
+        </div>
+    </section>
 
     <main>
         <section class="home-hero">
@@ -92,6 +105,44 @@
         </section>
 
         <section class="section section-muted">
+            <div class="container testimonial-carousel" data-carousel>
+                <div class="section-heading">
+                    <p class="eyebrow">Guest Feedback</p>
+                    <h2>What rafters say after launch day</h2>
+                </div>
+                <div class="carousel-track">
+                    <article class="carousel-slide is-active" data-slide aria-hidden="false">
+                        <blockquote>"Excellent guides and super clear instructions. Our first rafting trip felt safe
+                            and exciting the whole way."</blockquote>
+                        <p class="quote-author">Camila R. - Family Fun Run Guest</p>
+                    </article>
+                    <article class="carousel-slide" data-slide aria-hidden="true">
+                        <blockquote>"Our company team loved the Canyon Explorer package. Great pacing, professional
+                            crew, and smooth logistics."</blockquote>
+                        <p class="quote-author">Jordan M. - Team Coordinator</p>
+                    </article>
+                    <article class="carousel-slide" data-slide aria-hidden="true">
+                        <blockquote>"Rapid Fury was intense and perfectly managed. You can tell safety discipline is a
+                            real priority here."</blockquote>
+                        <p class="quote-author">Diego L. - Experienced Rafter</p>
+                    </article>
+                </div>
+                <div class="carousel-controls">
+                    <button type="button" class="carousel-btn" data-carousel-prev aria-label="Previous testimonial">Prev</button>
+                    <div class="carousel-dots" role="tablist" aria-label="Testimonials">
+                        <button type="button" class="carousel-dot is-active" data-carousel-dot data-slide-index="0"
+                          aria-label="Go to testimonial 1" aria-selected="true"></button>
+                        <button type="button" class="carousel-dot" data-carousel-dot data-slide-index="1"
+                          aria-label="Go to testimonial 2" aria-selected="false"></button>
+                        <button type="button" class="carousel-dot" data-carousel-dot data-slide-index="2"
+                          aria-label="Go to testimonial 3" aria-selected="false"></button>
+                    </div>
+                    <button type="button" class="carousel-btn" data-carousel-next aria-label="Next testimonial">Next</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-muted">
             <div class="container split-panel">
                 <div>
                     <p class="eyebrow">Featured Planning Path</p>
@@ -103,11 +154,50 @@
             </div>
         </section>
 
+        <section class="section container faq-section">
+            <div class="section-heading">
+                <p class="eyebrow">Quick Answers</p>
+                <h2>Frequently asked questions</h2>
+            </div>
+            <div class="faq-list">
+                <article class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>Do we need rafting experience before booking?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" hidden>
+                        <p>No previous experience is required for our beginner and intermediate packages. We brief
+                            every group before launch and match routes to your comfort level.</p>
+                    </div>
+                </article>
+                <article class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>What equipment is included in each trip?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" hidden>
+                        <p>Every package includes helmets, life jackets, paddles, and guide support. We also provide
+                            a pre-trip safety checklist so your group knows what to bring.</p>
+                    </div>
+                </article>
+                <article class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>How early should we reserve a trip date?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" hidden>
+                        <p>We recommend booking at least two weeks in advance for weekends and group trips so you can
+                            secure your preferred river and departure window.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
         <section class="section container newsletter">
             <div class="section-heading">
                 <h2>Get seasonal offers and river updates</h2>
             </div>
-            <form action="#" method="get">
+            <form action="#" method="get" class="needs-validation" novalidate>
                 <label for="news-name">Name</label>
                 <input type="text" id="news-name" name="news-name" required placeholder="Your name">
                 <label for="news-email">Email</label>
@@ -137,6 +227,8 @@
             </nav>
         </div>
     </footer>
+    <button type="button" class="back-to-top" aria-label="Back to top">Top</button>
+    <script src="scripts/main.js" defer></script>
 </body>
 
 </html>
