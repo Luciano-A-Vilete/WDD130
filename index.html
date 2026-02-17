@@ -5,46 +5,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-      content="Pernambuco, my today home state presentation page with some information and curiosities about it">
+      content="Business-style web development landing page for Luciano Vilete and featured project work.">
     <meta name="author" content="Luciano Armando Vilete">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
-    <title>Luciano Vilete | WDD 130 </title>
+    <title>Luciano Vilete | Business Web Presence</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="#">Home</a>
-            <a href="wwr/index.html">Rafting Website</a>
-        </nav>
+    <header class="site-header">
+        <div class="container header-content">
+            <p class="brand">Luciano Vilete</p>
+            <nav aria-label="Primary Navigation">
+                <a href="#services">Services</a>
+                <a href="#project">Project</a>
+                <a href="#location">Location</a>
+                <a href="wwr/index.html">Rafting Website</a>
+            </nav>
+        </div>
     </header>
-    <div class="grid">
-        <main>
-            <h1>Welcome to WDD 130</h1>
-            <p>My name is Luciano and I am from Pernambuco, Brazil. I enjoy learning web
-                development.
-            </p>
-            <img src="images/profile.jpg" alt="Myself by my wife.">
-            <ul class="box">
-                <li><a href="https://www.churchofjesuschrist.org/temples/details/recife-brazil-temple?lang=eng"
-                      target="_blank">Recife Brazil Temple</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/temples/details/manti-utah-temple?lang=eng"
-                      target="_blank">Manti Utah Temple</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/temples/details/cedar-city-utah-temple?lang=eng"
-                      target="_blank">Cedar City Utah Temple</a></li>
-            </ul>
-        </main>
 
-        <aside class="box">
-            <h2>Pernambuco</h2>
-            <img src="images/pernambuco-state-flag.png" alt="Flag of Pernambuco state">
-            <p>One of the fun facts about Pernambuco is that it seems like Portugal but
-                horizontally.
-            </p>
-        </aside>
-    </div>
-    <footer>
-        <p>&copy; 2026 Luciano Armando Vilete - WDD130 BYU - Idaho</p>
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Web Development Student | Business Focus</p>
+                    <h1>Professional websites that build trust and drive action.</h1>
+                    <p>I help small businesses present their services clearly, look credible online,
+                        and guide visitors
+                        toward booking or contact.</p>
+                    <div class="hero-actions">
+                        <a class="button primary" href="wwr/index.html">View Portfolio Project</a>
+                        <a class="button secondary" href="wwr/contact.html">Start a Conversation</a>
+                    </div>
+                </div>
+
+                <article class="hero-card">
+                    <img src="images/profile.jpg" alt="Portrait of Luciano Vilete">
+                    <h2>Luciano Armando Vilete</h2>
+                    <p>Available for entry-level freelance and internship opportunities in front-end
+                        web development.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="services" class="section container">
+            <h2>Core Services</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Business Landing Pages</h3>
+                    <p>Clear messaging, service-focused layout, and conversion-ready calls to
+                        action.</p>
+                </article>
+                <article class="card">
+                    <h3>Responsive Web Design</h3>
+                    <p>Consistent presentation across desktop, tablet, and mobile screens.</p>
+                </article>
+                <article class="card">
+                    <h3>Site Refresh and Cleanup</h3>
+                    <p>Updated typography, color systems, and structure to give existing sites a
+                        professional look.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="project" class="section section-muted">
+            <div class="container project-grid">
+                <div>
+                    <h2>Featured Business Project</h2>
+                    <p>The Rapid Trees Rafting website demonstrates a complete business flow, from
+                        branded homepage to
+                        contact conversion.</p>
+                    <ul class="project-list">
+                        <li>Strong homepage value proposition and calls to action</li>
+                        <li>Dedicated trips page with product-style comparisons</li>
+                        <li>Contact page for lead capture and inquiries</li>
+                    </ul>
+                    <a class="text-link" href="wwr/index.html">Open Rapid Trees Website</a>
+                </div>
+                <img src="wwr/images/rafting27_1024.webp"
+                  alt="Preview of Rapid Trees business website">
+            </div>
+        </section>
+
+        <section id="location" class="section container location-grid">
+            <div>
+                <h2>Based in Pernambuco, Brazil</h2>
+                <p>I combine local insight with modern web standards to help organizations
+                    communicate with confidence.
+                </p>
+                <div class="location-facts">
+                    <p><span>Focus:</span> Small business websites</p>
+                    <p><span>Availability:</span> Remote collaboration</p>
+                    <p><span>Current Role:</span> BYU-Idaho Software Development Student</p>
+                </div>
+            </div>
+            <div class="location-flag-wrap">
+                <img src="images/pernambuco-state-flag.png" alt="Flag of Pernambuco state">
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Luciano Armando Vilete | WDD130 BYU-Idaho</p>
+            <p>Business-oriented web development practice project</p>
+        </div>
     </footer>
 </body>
 

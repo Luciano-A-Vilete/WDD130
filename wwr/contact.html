@@ -4,122 +4,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Rapid Trees - Radical Rafting Company</title>
+    <title>Contact | Rapid Trees Rafting</title>
     <meta name="description"
-      content="Contact Dry Oar Rafting for inquiries, reservations, and suggestions. We are here to serve you.">
+      content="Contact Rapid Trees Rafting for trip planning, reservations, and group adventure support.">
     <meta name="author" content="Luciano Armando Vilete">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Merriweather:wght@700&display=swap"
+      rel="stylesheet">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/z-rapids-trees.jpg" alt="Dry Oar Rafting Logo">
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="logo" href="index.html">
+                <img src="images/z-rapids-trees.jpg" alt="Rapid Trees logo">
+                <span>Rapid Trees</span>
+            </a>
+            <nav class="site-nav" aria-label="Primary Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="trips.html">Trips</a></li>
+                    <li><a class="active" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul class="navigation">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="trips.html">Trips</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main class="contact-main">
-        <h1>Contact Us</h1>
+    <main>
+        <section class="page-banner">
+            <div class="container">
+                <p class="eyebrow">Plan Your Next Adventure</p>
+                <h1>Contact Rapid Trees</h1>
+                <p>Share your trip goals and we will help you select the best route, dates, and package.</p>
+            </div>
+        </section>
 
-        <div class="contact-grid">
-            <section class="company-info-section">
-                <h2>Our Location</h2>
+        <section class="section container contact-layout">
+            <article class="info-panel">
+                <h2>Office and Reservation Desk</h2>
                 <address>
                     <strong>Rapid Trees - Radical Rafting Company</strong><br>
                     123 River Road<br>
                     Salmon, ID 83466<br><br>
-                    📧 <a href="mailto:info@dryoarrafting.com">info@rapidtrees.com</a><br>
-                    📞 <a href="tel:+12085550100">(208) 555-0100</a>
+                    Email: <a href="mailto:info@rapidtrees.com">info@rapidtrees.com</a><br>
+                    Phone: <a href="tel:+12085550100">(208) 555-0100</a>
                 </address>
-
                 <div class="map-container">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2836.806622839304!2d-113.90022202353796!3d45.17647225139265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5357c2e36b8e8f85%3A0x6280a56f3458e028!2sSalmon%2C%20ID%2083467%2C%20EUA!5e0!3m2!1spt-PT!2sbr!4v1700000000000!5m2!1spt-PT!2sbr"
-                      height="300" allowfullscreen="" loading="lazy"
+                      height="280" allowfullscreen="" loading="lazy"
                       referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-            </section>
+            </article>
 
-            <section class="contact-form-section">
-                <h2>Send us a Message</h2>
+            <article class="form-panel">
+                <h2>Send a Message</h2>
                 <form action="#" method="post">
-                    <div class="form-item">
+                    <div class="form-row">
                         <label for="user_name">Full Name:</label>
                         <input type="text" id="user_name" name="user_name" required>
                     </div>
-                    <div class="form-item">
+                    <div class="form-row">
                         <label for="user_email">Email Address:</label>
                         <input type="email" id="user_email" name="user_email" required>
                     </div>
 
                     <fieldset class="radio-group">
-                        <legend>Purpose of Message:</legend>
-                        <label>
-                            <input type="radio" id="purpose_inquiry" name="purpose" value="inquiry"
-                              checked>
-                            General Inquiry
-                        </label>
-                        <label>
-                            <input type="radio" id="purpose_reservation" name="purpose"
-                              value="reservation">
-                            Reservation Question
-                        </label>
-                        <label>
-                            <input type="radio" id="purpose_suggestion" name="purpose"
-                              value="suggestion">
-                            Website Suggestion
-                        </label>
+                        <legend>Purpose of Message</legend>
+                        <label><input type="radio" id="purpose_inquiry" name="purpose" value="inquiry" checked> General
+                            Inquiry</label>
+                        <label><input type="radio" id="purpose_reservation" name="purpose" value="reservation">
+                            Reservation Question</label>
+                        <label><input type="radio" id="purpose_suggestion" name="purpose" value="suggestion"> Website
+                            Suggestion</label>
                     </fieldset>
 
-                    <div class="form-item">
+                    <div class="form-row">
                         <label for="user_message">Message:</label>
-                        <textarea id="user_message" name="user_message" rows="5"
-                          required></textarea>
+                        <textarea id="user_message" name="user_message" rows="5" required></textarea>
                     </div>
 
-                    <div class="checkbox-item">
-                        <label>
-                            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
-                            Please subscribe me to the monthly newsletter
-                        </label>
+                    <div class="checkbox-row">
+                        <label><input type="checkbox" id="newsletter" name="newsletter" value="yes"> Subscribe me to
+                            monthly trip and offer updates</label>
                     </div>
 
-                    <button type="submit" class="submit-btn">Send Message</button>
+                    <button type="submit" class="btn btn-primary full-width">Send Message</button>
                 </form>
-            </section>
-        </div>
+            </article>
+        </section>
 
-        <section class="serve-you-section">
-            <h2>We are here to serve you</h2>
-            <div class="serve-images-grid">
-                <img src="images/rafting27_1024.webp" alt="Employee serving customer">
-                <img src="images/rafting43_600.webp" alt="Rafting guide smiling">
-                <img src="images/happy-adventurers.jpg" alt="Team ready to help">
+        <section class="section section-muted">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Our Team Is Ready to Help</h2>
+                </div>
+                <div class="serve-grid">
+                    <img src="images/rafting27_1024.webp" alt="Employee serving customer">
+                    <img src="images/rafting43_600.webp" alt="Rafting guide smiling">
+                    <img src="images/happy-adventurers.jpg" alt="Team ready to help">
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>© 2026 | Rapid Trees - Radical Rafting Company | Luciano A Vilete</p>
-        <nav class="socialmedia">
-            <a href="https://facebook.com" target="_blank">
-                <img src="images/facebook-logo.png" alt="Facebook">
-            </a>
-            <a href="https://instagram.com" target="_blank">
-                <img src="images/instagram-logo.png" alt="Instagram">
-            </a>
-            <a href="https://linkedin.com" target="_blank">
-                <img src="images/linkedin-logo.png" alt="LinkedIn">
-            </a>
-        </nav>
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div>
+                <p class="footer-brand">Rapid Trees - Radical Rafting Company</p>
+                <p>Salmon, Idaho | Guided Whitewater Trips</p>
+            </div>
+            <div class="footer-links">
+                <a href="trips.html">Trips</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <nav class="socialmedia" aria-label="Social Media">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><img
+                      src="images/linkedin-logo.png" alt="LinkedIn"></a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><img
+                      src="images/instagram-logo.png" alt="Instagram"></a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><img
+                      src="images/facebook-logo.png" alt="Facebook"></a>
+            </nav>
+        </div>
     </footer>
 </body>
 

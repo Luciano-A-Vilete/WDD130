@@ -5,95 +5,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-      content="Rapid Trees Rafting - Home of the best white water rafting adventures. Book your trip today!">
+      content="Rapid Trees Rafting offers professionally guided whitewater trips for families, teams, and adventure groups.">
     <meta name="author" content="Luciano Armando Vilete">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Merriweather:wght@700&display=swap"
+      rel="stylesheet">
     <link rel="stylesheet" href="styles/rafting.css">
-    <title>Home - Rapid Trees Rafting</title>
+    <title>Rapid Trees Rafting | Professional River Adventures</title>
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/z-rapids-trees.jpg" alt="Rapid Trees Logo">
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="logo" href="index.html">
+                <img src="images/z-rapids-trees.jpg" alt="Rapid Trees logo">
+                <span>Rapid Trees</span>
+            </a>
+            <nav class="site-nav" aria-label="Primary Navigation">
+                <ul>
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="trips.html">Trips</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="trips.html">Trips</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
-        <div class="hero">
+        <section class="home-hero">
             <img src="images/rafting27_1024.webp" alt="Rafting adventure on the river">
-            <div class="hero-msg">
-                <h1>Welcome to Rapid Trees</h1>
-                <p>Experience the thrill of a lifetime</p>
-                <a href="trips.html" class="cta-button">Book Now</a>
-            </div>
-        </div>
-
-        <section class="features">
-            <h2>Why Choose Us?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <img src="images/rafting43_600.webp" alt="Expert Guides">
-                    <h3>Expert Guides</h3>
-                    <p>Our certified guides ensure your safety while delivering maximum fun on the
-                        rapids.</p>
-                </div>
-                <div class="feature-card">
-                    <img src="images/happy-adventurers.jpg" alt="Unforgettable Memories">
-                    <h3>Memories for Life</h3>
-                    <p>Capture the moment with our photo packages and create stories you'll tell
-                        forever.</p>
-                </div>
-                <div class="feature-card">
-                    <img src="images/z-rapids-trees.jpg" alt="Scenic Views">
-                    <h3>Scenic Routes</h3>
-                    <p>Enjoy breathtaking views of nature that you can only see from the river.</p>
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <p class="eyebrow">Guided Whitewater Experiences</p>
+                <h1>Professional rafting adventures with safety-first operations.</h1>
+                <p>Rapid Trees helps families, corporate teams, and outdoor travelers experience Idaho rivers with
+                    certified guides and clear trip planning.</p>
+                <div class="hero-actions">
+                    <a href="trips.html" class="btn btn-primary">Explore Trips</a>
+                    <a href="contact.html" class="btn btn-outline">Request a Quote</a>
                 </div>
             </div>
         </section>
 
-        <section class="newsletter">
-            <h2>Stay Updated</h2>
-            <p>Sign up for our newsletter to receive the latest news and exclusive offers.</p>
+        <section class="kpi-strip">
+            <div class="container kpi-grid">
+                <article>
+                    <h2>10+</h2>
+                    <p>Years guiding whitewater trips</p>
+                </article>
+                <article>
+                    <h2>2,500+</h2>
+                    <p>Guests hosted across all routes</p>
+                </article>
+                <article>
+                    <h2>98%</h2>
+                    <p>Guests rating trips as excellent</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container">
+            <div class="section-heading">
+                <p class="eyebrow">Why Rapid Trees</p>
+                <h2>Built for reliability, not just thrills.</h2>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <img src="images/rafting43_600.webp" alt="Expert Guides">
+                    <h3>Certified River Guides</h3>
+                    <p>Trained staff, structured safety briefings, and equipment checks before every launch.</p>
+                </article>
+                <article class="feature-card">
+                    <img src="images/happy-adventurers.jpg" alt="Unforgettable Memories">
+                    <h3>Flexible Group Planning</h3>
+                    <p>Family, friend, and team-friendly options with route difficulty matched to your experience.</p>
+                </article>
+                <article class="feature-card">
+                    <img src="images/z-rapids-trees.jpg" alt="Scenic Views">
+                    <h3>Transparent Packages</h3>
+                    <p>Simple pricing, clear duration details, and easy communication from booking to arrival.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section-muted">
+            <div class="container split-panel">
+                <div>
+                    <p class="eyebrow">Featured Planning Path</p>
+                    <h2>Choose your route, confirm your dates, and we handle the rest.</h2>
+                    <p>From first inquiry to launch day, our team keeps booking organized with fast answers and
+                        practical recommendations.</p>
+                </div>
+                <a href="trips.html" class="btn btn-primary">View Trip Catalog</a>
+            </div>
+        </section>
+
+        <section class="section container newsletter">
+            <div class="section-heading">
+                <h2>Get seasonal offers and river updates</h2>
+            </div>
             <form action="#" method="get">
-                <div class="form-group">
-                    <label for="news-name">Name:</label>
-                    <input type="text" id="news-name" name="news-name" required
-                      placeholder="Your Name">
-                </div>
-                <div class="form-group">
-                    <label for="news-email">Email:</label>
-                    <input type="email" id="news-email" name="news-email" required
-                      placeholder="Your Email">
-                </div>
-                <button type="submit" class="submit-btn">Subscribe</button>
+                <label for="news-name">Name</label>
+                <input type="text" id="news-name" name="news-name" required placeholder="Your name">
+                <label for="news-email">Email</label>
+                <input type="email" id="news-email" name="news-email" required placeholder="you@example.com">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
             </form>
         </section>
-
-        <section class="final-cta">
-            <h2>Ready for the Adventure?</h2>
-            <a href="trips.html" class="cta-button">View Our Trips</a>
-        </section>
-
     </main>
 
-    <footer>
-        <p>&copy; 2026 Rapid Trees - Radical Rafting Company | Luciano Armando Vilete</p>
-        <nav class="socialmedia">
-            <a href="https://linkedin.com"><img src="images/linkedin-logo.png"
-                  alt="Linkedin Icon"></a>
-            <a href="https://instagram.com"><img src="images/instagram-logo.png"
-                  alt="Instagram Icon"></a>
-            <a href="https://facebook.com"><img src="images/facebook-logo.png"
-                  alt="Facebook Icon"></a>
-        </nav>
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div>
+                <p class="footer-brand">Rapid Trees - Radical Rafting Company</p>
+                <p>Salmon, Idaho | Guided Whitewater Trips</p>
+            </div>
+            <div class="footer-links">
+                <a href="trips.html">Trips</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <nav class="socialmedia" aria-label="Social Media">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><img
+                      src="images/linkedin-logo.png" alt="LinkedIn"></a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><img
+                      src="images/instagram-logo.png" alt="Instagram"></a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><img
+                      src="images/facebook-logo.png" alt="Facebook"></a>
+            </nav>
+        </div>
     </footer>
 </body>
 

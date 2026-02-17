@@ -5,123 +5,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-      content="Explore our white water rafting packages. From beginner friendly to extreme rapids, find your perfect adventure with Rapid Trees.">
+      content="Explore Rapid Trees rafting packages, compare difficulty levels, and choose the trip that fits your group.">
     <meta name="author" content="Luciano Armando Vilete">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Merriweather:wght@700&display=swap"
+      rel="stylesheet">
     <link rel="stylesheet" href="styles/rafting.css">
-    <title>Available Trips - Rapid Trees Rafting</title>
+    <title>Trips | Rapid Trees Rafting</title>
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/z-rapids-trees.jpg" alt="Rapid Trees Logo">
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="logo" href="index.html">
+                <img src="images/z-rapids-trees.jpg" alt="Rapid Trees logo">
+                <span>Rapid Trees</span>
+            </a>
+            <nav class="site-nav" aria-label="Primary Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a class="active" href="trips.html">Trips</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="trips.html">Trips</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
-        <div class="trips-hero">
-            <h1>Our Adventures</h1>
-            <p>Choose the thrill that fits your style!</p>
-        </div>
+        <section class="page-banner">
+            <div class="container">
+                <p class="eyebrow">Trip Catalog</p>
+                <h1>Choose the right adventure for your team</h1>
+                <p>Every package includes guide support, safety briefing, and route planning suited to your experience
+                    level.</p>
+            </div>
+        </section>
 
-        <section class="trips-container">
-            <div class="trip-card">
+        <section class="section container trips-grid">
+            <article class="trip-card">
                 <img src="images/happy-adventurers.jpg" alt="Family rafting trip">
                 <div class="trip-info">
-                    <h2>Family Fun Run</h2>
-                    <p>A perfect introduction to rafting. Gentle rapids and scenic views make this
-                        ideal for families and beginners. Includes a riverside lunch.</p>
-                    <span class="badge level-easy">Level: Beginner</span>
+                    <div class="trip-head">
+                        <h2>Family Fun Run</h2>
+                        <span class="badge level-easy">Beginner</span>
+                    </div>
+                    <p>A gentle half-day route with scenic views and entry-level rapids for first-time rafters.</p>
+                    <ul>
+                        <li>Duration: 4 hours</li>
+                        <li>River Class: I-II</li>
+                        <li>Starting at: $45 / person</li>
+                    </ul>
                 </div>
-            </div>
+            </article>
 
-            <div class="trip-card">
+            <article class="trip-card">
                 <img src="images/rafting43_600.webp" alt="Intermediate rafting group">
                 <div class="trip-info">
-                    <h2>Canyon Explorer</h2>
-                    <p>Step up the excitement with Class III rapids. Navigate through the stunning
-                        canyon walls and experience the rush of the river.</p>
-                    <span class="badge level-medium">Level: Intermediate</span>
+                    <div class="trip-head">
+                        <h2>Canyon Explorer</h2>
+                        <span class="badge level-medium">Intermediate</span>
+                    </div>
+                    <p>A full-day experience through canyon routes with stronger currents and team paddling sections.
+                    </p>
+                    <ul>
+                        <li>Duration: 8 hours</li>
+                        <li>River Class: III</li>
+                        <li>Starting at: $85 / person</li>
+                    </ul>
                 </div>
-            </div>
+            </article>
 
-            <div class="trip-card">
+            <article class="trip-card">
                 <img src="images/rafting27_1024.webp" alt="Extreme rafting adventure">
                 <div class="trip-info">
-                    <h2>Rapid Fury</h2>
-                    <p>For the adrenaline junkies! Tackle our most challenging Class IV and V
-                        rapids. Technical paddling and teamwork required.</p>
-                    <span class="badge level-hard">Level: Expert</span>
+                    <div class="trip-head">
+                        <h2>Rapid Fury</h2>
+                        <span class="badge level-hard">Expert</span>
+                    </div>
+                    <p>High-intensity route for experienced rafters seeking technical rapids and maximum adrenaline.</p>
+                    <ul>
+                        <li>Duration: Full day+</li>
+                        <li>River Class: IV-V</li>
+                        <li>Starting at: $120 / person</li>
+                    </ul>
                 </div>
+            </article>
+        </section>
+
+        <section class="section section-muted">
+            <div class="container table-wrap">
+                <h2>Schedule and Pricing Overview</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Adventure</th>
+                            <th>Duration</th>
+                            <th>Difficulty</th>
+                            <th>Price / Person</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Family Fun Run</td>
+                            <td>4 Hours</td>
+                            <td>Class I-II</td>
+                            <td>$45</td>
+                        </tr>
+                        <tr>
+                            <td>Canyon Explorer</td>
+                            <td>8 Hours</td>
+                            <td>Class III</td>
+                            <td>$85</td>
+                        </tr>
+                        <tr>
+                            <td>Rapid Fury</td>
+                            <td>Full Day+</td>
+                            <td>Class IV-V</td>
+                            <td>$120</td>
+                        </tr>
+                        <tr>
+                            <td>Overnight Expedition</td>
+                            <td>2 Days / 1 Night</td>
+                            <td>Class III-IV</td>
+                            <td>$250</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
-        <section class="trips-table-section">
-            <h2>Trip Schedule & Pricing</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Adventure Name</th>
-                        <th>Duration</th>
-                        <th>Difficulty</th>
-                        <th>Price per Person</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Family Fun Run</td>
-                        <td>Half Day (4 hrs)</td>
-                        <td>Class I-II</td>
-                        <td>$45</td>
-                    </tr>
-                    <tr>
-                        <td>Canyon Explorer</td>
-                        <td>Full Day (8 hrs)</td>
-                        <td>Class III</td>
-                        <td>$85</td>
-                    </tr>
-                    <tr>
-                        <td>Rapid Fury</td>
-                        <td>Full Day +</td>
-                        <td>Class IV-V</td>
-                        <td>$120</td>
-                    </tr>
-                    <tr>
-                        <td>Overnight Expedition</td>
-                        <td>2 Days / 1 Night</td>
-                        <td>Class III-IV</td>
-                        <td>$250</td>
-                    </tr>
-                </tbody>
-            </table>
+        <section class="section container">
+            <div class="booking-panel">
+                <h2>Need help choosing the best route?</h2>
+                <p>Tell us your group size and experience level and we will recommend the right package.</p>
+                <a href="contact.html" class="btn btn-primary">Talk to Our Team</a>
+            </div>
         </section>
-
-        <section class="call-to-action">
-            <h2>Ready to Book Your Adventure?</h2>
-            <p>Spots fill up quickly! Contact us today to reserve your seat on the raft.</p>
-            <a href="contact.html" class="cta-button">Contact Us Now</a>
-        </section>
-
     </main>
 
-    <footer>
-        <p>&copy; 2026 Rapid Trees - Radical Rafting Company | Luciano Armando Vilete</p>
-        <nav class="socialmedia">
-            <a href="https://linkedin.com"><img src="images/linkedin-logo.png"
-                  alt="Linkedin Icon"></a>
-            <a href="https://instagram.com"><img src="images/instagram-logo.png"
-                  alt="Instagram Icon"></a>
-            <a href="https://facebook.com"><img src="images/facebook-logo.png"
-                  alt="Facebook Icon"></a>
-        </nav>
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div>
+                <p class="footer-brand">Rapid Trees - Radical Rafting Company</p>
+                <p>Salmon, Idaho | Guided Whitewater Trips</p>
+            </div>
+            <div class="footer-links">
+                <a href="trips.html">Trips</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <nav class="socialmedia" aria-label="Social Media">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><img
+                      src="images/linkedin-logo.png" alt="LinkedIn"></a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><img
+                      src="images/instagram-logo.png" alt="Instagram"></a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><img
+                      src="images/facebook-logo.png" alt="Facebook"></a>
+            </nav>
+        </div>
     </footer>
 </body>
 
